@@ -1,0 +1,21 @@
+{
+    "plugins": ["functional"],
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:functional/external-recommended",
+        "plugin:functional/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-shadow": "off",
+        "functional/no-expression-statement": "off"
+    }
+}
