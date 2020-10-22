@@ -1,5 +1,10 @@
-// eslint-disable-next-line functional/immutable-data
-module.exports = ((catModel, utils, tasks) => {
+import { catModel } from "./cat.model";
+
+const tasks = { sendSms: () => console.log("sms enviado con exito") };
+const utils = {
+  someUtilTask: () => console.log("tarea util ocupada con exito"),
+};
+const initService = ({ catModel, utils, tasks }) => {
   // IFEE for instant function execution
   // our code is declared inside the function declaration
   const cats = [{ name: "lanita", age: 2 }];
@@ -29,13 +34,8 @@ module.exports = ((catModel, utils, tasks) => {
     updateOne,
     deleteOne,
   };
-})(
-  {
-    find: (query) => console.log(query),
-    update: (updateData, id) => {},
-    deleteOne: (id) => {},
-    createOne: (createData) => {},
-  },
-  { someUtilTask: () => console.log("tarea util ocupada con exito") },
-  { sendSms: () => console.log("sms enviado con exito") }
-);
+};
+// eslint-disable-next-line functional/immutable-data
+const catService = initService({ catModel, utils, tasks });
+const testCatService = initService;
+export { catService, testCatService };

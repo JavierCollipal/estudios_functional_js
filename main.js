@@ -1,9 +1,4 @@
-const R = require('ramda')
+import { catService } from "./structure/cat.service";
 
-const sumOne = (x) => x + 1;
-const squareOne = (x) => x * x;
-const toStringOne = (x) => x.toString();
-const pipeExample = R.pipe(sumOne,squareOne,toStringOne)
-
-
-console.log(pipeExample(1))
+console.log("hola mundo");
+console.log("este es un catService modulo es6", catService.getAll());

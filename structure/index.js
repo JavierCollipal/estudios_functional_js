@@ -1,3 +1,3 @@
-const catService = require("./cat.service");
+import { catService } from "./cat.service";
 
 console.log(catService.getAll());
