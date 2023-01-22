@@ -23,6 +23,7 @@ const averageSUVPrice2 = R.compose(
   R.map((v) => v.price),
   R.filter((v) => v.type === "suv")
 )(vehicles);
+
 console.time("time without ramba");
 console.log(averageSUVPrice); // 33399
 console.timeEnd("time without ramba");
